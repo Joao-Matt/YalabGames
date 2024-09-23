@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroop Test Instructions</title>
+    <link rel="stylesheet" href="{{ url_for('serve_static', filename='stroop_styles.css') }}">
+</head>
+<body>
+    <div id="instructionsScreen">
+        <h1>הוראות למבחן סטרופ</h1>
+        <p>הוראות ייכתבו כאן</p>
+        <p>
+            במבחן זה יופיעו מילים המתארות צבעים (כמו "אדום", "כחול" וכו'), אך הצבע של המילים עשוי להיות שונה מהצבע שהם מייצגים.
+            עליך ללחוץ על המקש המתאים לצבע של המילה שאתה רואה על המסך, ולא למילה עצמה.
+        </p>
+        <p>לדוגמה, אם תראה את המילה "אדום" בצבע ירוק, עליך ללחוץ על המקש המתאים לצבע הירוק.</p>
+        <button onclick="startTraining()">התחל אימון</button>
+    </div>
+
+    <script src="{{ url_for('serve_static', filename='stroop_logic.js') }}"></script>
+</body>
+</html>

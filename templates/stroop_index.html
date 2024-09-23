@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stroop Test</title>
+    <link rel="stylesheet" href="{{ url_for('serve_static', filename='stroop_styles.css') }}">
+</head>
+<body>
+    <!-- Hidden input for participant number -->
+    <input type="hidden" id="participantNumber" value="{{ session['participant_number'] }}">
+
+    <div id="welcomeScreen">
+        <p>ברוך הבא למשחק שטרופ</p>
+        <button id="startButton" onclick="showInputScreen()">התחל</button>
+    </div>
+    
+    <!-- Input Screen for participant number and password (initially hidden) -->
+    <div id="inputScreen" style="display: none;">
+        <p>הכנס מספר משתתף וסיסמא</p>
+        <input type="text" id="participantNumber" placeholder="מספר משתתף">
+        <input type="password" id="password" placeholder="נבדק">
+        <button id="checkButton" onclick="checkStroopParticipant()">כנס</button>
+        <p id="message"></p>
+    </div>
+    
+    <!-- Instructions Screen -->
+    <<div id="instructionsScreen">
+            <h1>הוראות למבחן סטרופ</h1>
+            <p>הוראות ייכתבו כאן</p>
+            <p>
+                במבחן זה יופיעו מילים המתארות צבעים (כמו "אדום", "כחול" וכו'), אך הצבע של המילים עשוי להיות שונה מהצבע שהם מייצגים.
+                עליך ללחוץ על המקש המתאים לצבע של המילה שאתה רואה על המסך, ולא למילה עצמה.
+            </p>
+            <p>לדוגמה, אם תראה את המילה "אדום" בצבע ירוק, עליך ללחוץ על המקש המתאים לצבע הירוק.</p>
+            <button onclick="startTraining()">התחל אימון</button>
+        </div>
+
+
+    <!-- Training Screen -->
+    <div id="trainingScreen" style="display: none;">
+        <h2>שלב אימון</h2>
+        <p id="trainingMessage"></p>
+        <p id="wordDisplay" style="font-size:48px;"></p>
+        <button onclick="nextTrainingWord()">מילה הבאה</button>
+    </div>
+
+    <!-- Test Screen -->
+    <div id="testScreen" style="display:none;">
+        <h2>מבחן סטרופ</h2>
+        <p>לחץ על המקשים המתאימים לצבע המילה</p>
+        <p id="wordDisplayTest" style="font-size:48px;"></p>
+    </div>
+
+    <script src="{{ url_for('serve_static', filename='stroop_logic.js') }}"></script>
+</body>
+</html>

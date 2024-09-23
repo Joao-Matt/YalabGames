@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='RTT_style.css') }}">
+</head>
+
+<body>
+    <h1>שלב 1</h1>
+    <div id="square" class="red-square"></div>
+    <p id="message"></p>
+    <button id="proceedButton" style="display:none;" onclick="proceedToInstructions2()">המשך להוראות שלב 2</button>
+    <script src="{{ url_for('static', filename='RTT_script.js') }}"></script>
+</body>
+
+</html>

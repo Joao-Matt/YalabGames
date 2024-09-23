@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions</title>
+    <link rel="stylesheet" href="{{ url_for('serve_static', filename='RTT_style.css') }}">
+</head>
+
+<body>
+    <header>
+        <div dir="rtl" style="margin-top: 200px;margin-right: 100px;margin-left: 100px;" >
+            <p style="font-size: 28px;"><strong>הוראות לשלב 1</strong></p>
+    
+            <p style="font-size: 24px;"><strong>מטרה:</strong><br>
+            להגיב כמה שיותר מהר כאשר הריבוע על המסך משנה את צבעו.</p>
+    
+            <p style="font-size: 24px;"><strong>הוראות:</strong></p>
+            <ul style="font-size: 22px;">
+                <li><strong>תחילת השלב:</strong><br>
+                תראה ריבוע אדום על המסך.</li>
+                <li><strong>המתן עד שהריבוע ישנה צבע:</strong><br>
+                הריבוע יהפוך לירוק בזמן אקראי.<br>
+                ברגע שהריבוע הופך לירוק, לחץ על <strong>מקש הרווח</strong> מהר ככל האפשר.</li>
+                <li>אנו ממליצים להניח יד על השולחן כך שהאצבע המורה על מקש הרווח.</li>
+                <li><strong>מספר סיבובים:</strong><br>
+                ישנם <strong><span id="phase1-rounds"></span> סיבובים</strong> בשלב 1. נסה להגיב כמה שיותר מהר בכל סיבוב.</li>
+                <li><strong>סיום שלב 1:</strong><br>
+                לאחר שתשלים את כל <span id="phase1-rounds"></span> הסיבובים, שלב 1 יסתיים ותעבור לשלב הבא.</li>
+            </ul>
+        </div>
+    </header>
+    
+    <li dir="rtl" style="font-size: 22px;"><strong>מנח ידיים מומלץ:</strong></li>
+
+    <img src="{{ url_for('serve_static', filename='drawn_phase_1.jpeg') }}" style="width:40%; height:auto;">
+    
+    <button style="background-color: #28a745; color: white; border: none; padding: 10px 20px; cursor: pointer;" onclick="proceedToPractice1()">המשך לאימון</button>
+
+
+    <script src="{{ url_for('serve_static', filename='RTT_script.js') }}"></script>
+</body>
+
+</html>

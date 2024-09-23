@@ -1,0 +1,12 @@
+Flask
+pandas
+flask_cors
+gunicorn
+openpyxl
+oauth2client
+PyOpenSSL
+gspread
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+jinja2

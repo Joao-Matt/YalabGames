@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(240, 240, 240, 0.5); /* Adjust the alpha value to make it more faded */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+  background-color: rgb(105, 191, 108, 0.5); /* Adjust the alpha value to make it more faded */
+    color: black;
+  padding: 20px 0;
+  margin-left: 50px;   /* Set a smaller margin on the left */
+  margin-right: 50px; /* Set a larger margin on the right */
+  margin-bottom: 40px; /* Keep the bottom margin */
+  width: 80%;                /* Set the width of the header */
+  max-width: 1200px;         /* Limit the maximum width */
+  border-radius: 10px;       /* Optional: Add rounded corners */
+}
+
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#message {
+    font-size: 28px; /* Makes the message text larger */
+    margin-bottom: 20px; /* Adds space below the message */
+}
+
+/* Styles for input field and button */
+#participantNumber {
+    font-size: 1.5em;
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 15px; /* Adds space below the participant number input */
+}
+
+#password {
+    font-size: 1.5em;
+    padding: 10px;
+    width: 300px;
+}
+
+input::placeholder {
+    text-align: right;
+    direction: rtl;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.red-square {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: 40px;
+}
+
+.green-square {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(7, 216, 7);
+    margin: 40px;
+}
+
+#proceedButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#square-container {
+    text-align: center;
+    /* Centers the squares horizontally */
+}

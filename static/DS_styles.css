@@ -1,0 +1,219 @@
+/* Reset default margins, paddings, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body and html fill the entire viewport */
+body,
+html {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    /* Prevent scrolling */
+}
+
+header {
+  background-color: rgba(76, 175, 80, 0.2); /* Adjust the alpha value to make it more faded */
+  color: black;
+  padding: 20px 0;
+  margin-bottom: 40px;
+}
+
+/* Styles for input field and button */
+#participantNumber {
+    font-size: 1.5em;
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 15px; /* Adds space below the participant number input */
+}
+
+#password {
+    font-size: 1.5em;
+    padding: 10px;
+    width: 300px;
+}
+
+input::placeholder {
+    text-align: right;
+    direction: rtl;
+}
+
+#checkButton {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+/* Styles for the welcome screen */
+#welcomeScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    /* Use the full width for centering content */
+    height: 100vh;
+    /* This makes the welcome screen take up the full viewport height */
+    font-size: 24px;
+    /* Adjust this value to make the text larger or smaller as needed */
+}
+
+#inputScreen p {
+    font-size: 1.5em; /* Increase the font size for <p> elements inside #inputScreen */
+}
+
+/* Styles for the start button to make it more prominent */
+#startButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    /* Larger font size for the button text */
+    margin-top: 20px;
+    /* Space between the message and the button */
+    cursor: pointer;
+    /* Changes the cursor to a pointer to indicate it's clickable */
+}
+
+#startGameButton  {
+    padding: 10px 20px;
+    font-size: 20px;
+    /* Larger font size for the button text */
+    margin-top: 20px;
+    /* Space between the message and the button */
+    cursor: pointer;
+    /* Changes the cursor to a pointer to indicate it's clickable */
+}
+
+/* Styles for the start button to make it more prominent */
+#saveButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    /* Larger font size for the button text */
+    margin-top: 20px;
+    /* Space between the message and the button */
+    cursor: pointer;
+    /* Changes the cursor to a pointer to indicate it's clickable */
+}
+
+/* Centering the digit display */
+#randomDigits,
+#digitDisplay {
+    position: fixed;
+    /* Overlay the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    /* Visible digit size */
+}
+
+/* Message area styling */
+#messageArea {
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    width: 100%;
+    /* Take up full container width */
+}
+
+/* Styles for the entire keypad and display area */
+#gameArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles for each row of the keypad */
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Styles for each key/button */
+.key,
+.key.special {
+    width: 84px;
+    /* Button width */
+    height: 84px;
+    /* Button height */
+    margin: 10px;
+    /* Space around buttons */
+    font-size: 28px;
+    /* Button font size */
+    cursor: pointer;
+    /* Indicate clickable */
+    text-align: center;
+}
+
+/* Special button styling */
+.key.special {
+    width: 126px;
+    /* Button width */
+    height: 84px;
+    /* Button height */
+    margin: 10px;
+    /* Space around buttons */
+    font-size: 28px;
+    /* Button font size */
+    cursor: pointer;
+    /* Indicate clickable */
+    text-align: center;
+    background-color: #f0ad4e;
+    color: white;
+}
+
+/* Display area styling */
+#displayArea {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 24px;
+    width: 200px;
+    /* Adjust as needed */
+    height: 50px;
+    /* Adjust as needed */
+    border: 1px solid #000;
+    background-color: #f3f3f3;
+    color: #333;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#inputScreen {
+    display: flex;
+    flex-direction: column;
+    /* Stack children vertically */
+    font-size: 20px;
+    align-items: center;
+    /* Center-align children horizontally */
+    gap: 10px;
+    /* Adjust the space between elements */
+    width: 100%;
+    /* Adjust the width as needed */
+}
+
+#digitInput {
+    width: 30%;
+    /* Adjust width to enlarge the input box */
+    padding: 10px;
+    /* Add more padding to increase height */
+    font-size: 18px;
+    /* Adjust font size for better visibility */
+}

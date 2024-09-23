@@ -1,0 +1,94 @@
+/* Reset default margins, paddings, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure body and html fill the entire viewport */
+body, html {
+    font-family: Arial, sans-serif;
+    direction: rtl; /* Ensure the direction is right-to-left */
+    text-align: center; /* Center-align the text */
+    margin: 0;
+    padding: 0;
+}
+
+#trainingScreen {
+    text-align: center;
+    font-size: 24px; /* Make text size larger */
+    line-height: 1.8; /* Improve line spacing for readability */
+}
+
+/* Button Styling */
+button {
+    font-size: 20px; /* Adjust font size for button text */
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#testScreen {
+    font-size: 22px; /* Increased general text size */
+    line-height: 1.5;
+}
+
+/* Styles for input field and button */
+#participantNumber {
+    font-size: 1.5em;
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 15px; /* Adds space below the participant number input */
+}
+
+#password {
+    font-size: 1.5em;
+    padding: 10px;
+    width: 300px;
+}
+
+#checkButton {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+/* Styles for the welcome screen */
+#welcomeScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 24px;
+}
+
+/* Styles for the start button */
+#startButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#testScreen {
+    text-align: center;
+    font-size: 48px;
+}
+
+/* Styling the instructions screen */
+#instructionsScreen {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px; /* Control the width of the content */
+}

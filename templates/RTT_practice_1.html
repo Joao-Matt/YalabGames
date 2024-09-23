@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Phase 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='RTT_style.css') }}">
+</head>
+<body>
+    <h1>אימון שלב 1</h1>
+    <p dir="rtl" id="message" style="text-align: center;"></p>
+    <div id="square" class="red-square"></div>
+    <button id="proceedButton" style="display:none;" onclick="proceedToPhase1()">המשך לשלב 1</button>
+    <script src="{{ url_for('static', filename='RTT_script.js') }}"></script>
+</body>
+</html>

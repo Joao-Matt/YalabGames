@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="{{ url_for('serve_static', filename='DS_styles.css') }}">
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <div id="welcomeScreen">
+        <p>ברוך הבא למשחק הזיכרון</p>
+        <button id="startButton" onclick="showInputScreen()">התחל</button>
+    </div>
+
+    <!-- Input Screen for participant number and password (initially hidden) -->
+    <div id="inputScreen" style="display: none;">
+        <p>הכנס מספר משתתף וסיסמא</p>
+        <input type="text" id="participantNumber" placeholder="מספר משתתף">
+        <input type="password" id="password" placeholder="נבדק">
+        <button id="checkButton" onclick="checkDSParticipant()">כנס</button>
+        <p id="message"></p>
+    </div>
+
+    <!-- Instructions Screen (initially hidden) -->
+    <div dir="rtl" id="instructionsScreen" style="display: none;">
+        <p style="font-size: 28px;"><strong>הוראות לשלב 1</strong></p>
+        <p style="font-size: 24px;"><strong>מטרה:</strong><br>
+        <p style="font-size: 22px;">במשחק זה, יוצגו בפניך סדרות של מספרים. עליך לזכור ולהקליד את המספרים באותו הסדר.</p>
+        <p style="font-size: 22px;">המשחק יתחיל עם סדרת מספרים קצרה ויתארך בכל שלב במידה ותשיב נכונה.</p>
+        <p style="font-size: 22px;">המשחק נעשה <strong>אך ורק</strong> בערת העכבר ולא יעבוד עם המקשים</p>
+        <p style="font-size: 22px;">לחץ על הכפתור למטה כדי להתחיל את האימון</p>
+        <button id="startGameButton" onclick="startGame()">התחל משחק</button>
+    </div>
+
+    <div dir="rtl" id="endTrainingMessage" style="display: none;">
+        <p style="font-size: 28px;"><strong>כל הכבוד!</strong></p>
+        <p style="font-size: 28px;"><strong>כעת נמשיך למשחק עצמו</strong></p>
+    </div>
+    
+    <!-- Display area for showing random digits -->
+    <div id="randomDigits" style="display: none;">
+        <p id="digitDisplay"></p>
+    </div>
+
+    <!-- Game area (initially hidden) -->
+    <div id="gameArea" style="display: none;">
+        <!-- Display area for showing pressed digits -->
+        <div id="messageArea"></div>
+        <div id="displayArea"></div>
+
+        <!-- Keypad -->
+        <div id="keypad">
+            <div class="row">
+                <button class="key" onclick="keyPressed(1)">1</button>
+                <button class="key" onclick="keyPressed(2)">2</button>
+                <button class="key" onclick="keyPressed(3)">3</button>
+            </div>
+            <div class="row">
+                <button class="key" onclick="keyPressed(4)">4</button>
+                <button class="key" onclick="keyPressed(5)">5</button>
+                <button class="key" onclick="keyPressed(6)">6</button>
+            </div>
+            <div class="row">
+                <button class="key" onclick="keyPressed(7)">7</button>
+                <button class="key" onclick="keyPressed(8)">8</button>
+                <button class="key" onclick="keyPressed(9)">9</button>
+            </div>
+            <div class="row">
+                <button class="key special" onclick="deleteLast()">Delete</button>
+                <button class="key" onclick="keyPressed(0)">0</button>
+                <button class="key special" onclick="enterPressed()">Enter</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('serve_static', filename='DS_logic.js') }}"></script>
+</body>
+
+</html>

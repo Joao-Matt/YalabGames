@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Check</title>
+    <link rel="stylesheet" href="{{ url_for('serve_static', filename='RTT_style.css') }}">
+</head>
+
+<body>
+    <h1 style="text-align: right; direction: rtl;">הכנס מספר משתתף וסיסמא</h1>
+    <input type="text" id="participantNumber" placeholder="מספר משתתף">
+    <input type="password" id="password" placeholder="סיסמא">
+    <button onclick="checkParticipant()">כנס</button>
+    <p id="message"></p>
+
+    <script src="{{ url_for('serve_static', filename='RTT_script.js') }}"></script>
+</body>
+
+</html>

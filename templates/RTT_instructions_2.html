@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions2</title>
+    <link rel="stylesheet" href="{{ url_for('serve_static', filename='RTT_style.css') }}">
+</head>
+
+<body>
+    <header>
+        <div dir="rtl" style="line-height: 1.8;margin-top: 200px;margin-right: 100px;margin-left: 100px">
+            <p style="font-size: 28px;"><strong>הוראות לשלב 2</strong></p>
+    
+            <p style="font-size: 24px;"><strong>מטרה:</strong><br>
+            להגיב במהירות ובדיוק על ידי לחיצה על המקש הנכון כאשר אחד הריבועים על המסך משנה את צבעו.</p>
+    
+            <p style="font-size: 24px;"><strong>הוראות:</strong></p>
+            <ul style="font-size: 22px;">
+                <li><strong>תחילת השלב:</strong><br>
+                ישנם ארבעה ריבועים אדומים על המסך, כל אחד במיקום שונה.</li>
+                <li><strong>המתן עד שאחד הריבועים ישנה צבע:</strong><br>
+                אחד מהריבועים יהפוך לירוק בזמן אקראי.<br>
+                כאשר ריבוע הופך לירוק, לחץ על המקש המתאים למיקום של אותו ריבוע:<br>
+                <ul>
+                    <li><strong>ריבוע עליון שמאלי</strong>: לחץ על <strong>A</strong></li>
+                    <li><strong>ריבוע עליון ימני</strong>: לחץ על <strong>S</strong></li>
+                    <li><strong>ריבוע תחתון שמאלי</strong>: לחץ על <strong>K</strong></li>
+                    <li><strong>ריבוע תחתון ימני</strong>: לחץ על <strong>L</strong></li>
+                    אנו ממליצים על מנח בו האצבע המורה הימנית על המקש K והאמה הימנית על המקש L, והאצבע המורה השמאלית על המקש S והאמה השמאלית על המקש A.<br>
+                </ul></li>
+                <li><strong>מספר סיבובים:</strong><br>
+                ישנם <strong><span id="phase2-rounds"></span> סיבובים</strong> בשלב 2. המטרה שלך היא ללחוץ על המקש הנכון במהירות המרבית בכל פעם שריבוע הופך לירוק.</li>
+                <li><strong>סיום שלב 2:</strong><br>
+                לאחר שתשלים את כל <span id="phase2-rounds"></span> הסיבובים, שלב 2 יסתיים ותסיים את הניסוי.</li>
+            </ul>
+        </div>
+    </header>
+
+    <li dir="rtl" style="font-size: 22px;"><strong>מנח ידיים מומלץ:</strong></li>
+
+    <img src="{{ url_for('serve_static', filename='drawn_phase_2.jpg') }}" style="width:40%; height:auto;">
+
+    <button style="background-color: #28a745; color: white; border: none; padding: 10px 20px; cursor: pointer;" onclick="proceedToPractice2()">המשך לאימון</button>
+
+    <script src="{{ url_for('serve_static', filename='RTT_script.js') }}"></script>
+</body>
+
+</html>

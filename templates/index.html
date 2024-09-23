@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YALAB GameShow</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>YALAB-GameShow</h1>
+    </header>
+    <main dir="rtl">
+        <p>ברוכים הבאים</p>
+        <div class="button-container">
+            <button onclick="window.location.href='/RTT_index'">זמן תגובה</button>
+            <button onclick="window.location.href='/DS_index'">משחק זיכרון</button>
+            <button onclick="window.location.href='/stroop_index'">מבחן סטרופ</button>
+        </div>
+        <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+    </main>
+</body>
+
+</html>
